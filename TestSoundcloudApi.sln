@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSoundcloudApi", "TestSoundcloudApi.csproj", "{AA34D035-37FF-4C00-BD27-C7F93DC7E35E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{8C59C9DD-2250-427F-AF5E-C9023B4BBF88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundCloudApi", "SoundCloudApi\SoundCloudApi.csproj", "{7C5562F1-B6F0-45F2-BB9D-D759200CD0CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA34D035-37FF-4C00-BD27-C7F93DC7E35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA34D035-37FF-4C00-BD27-C7F93DC7E35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA34D035-37FF-4C00-BD27-C7F93DC7E35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA34D035-37FF-4C00-BD27-C7F93DC7E35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C59C9DD-2250-427F-AF5E-C9023B4BBF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C59C9DD-2250-427F-AF5E-C9023B4BBF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C59C9DD-2250-427F-AF5E-C9023B4BBF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C59C9DD-2250-427F-AF5E-C9023B4BBF88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5562F1-B6F0-45F2-BB9D-D759200CD0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5562F1-B6F0-45F2-BB9D-D759200CD0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5562F1-B6F0-45F2-BB9D-D759200CD0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5562F1-B6F0-45F2-BB9D-D759200CD0CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

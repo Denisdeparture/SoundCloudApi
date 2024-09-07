@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestSoundcloudApi.Models;
+using TestSoundcloudApi.ServiceModels;
 
-namespace TestSoundcloudApi
+namespace TestSoundcloudApi.ServicesInterface
 {
     public interface ILoad
     {
-        public void Load(Collection musicobject, LoggingError logging, uint versionLoaderindex = 0);
+        public MusicInfoModel Load(Collection musicobject, uint versionLoaderindex = 0);
     }
 }

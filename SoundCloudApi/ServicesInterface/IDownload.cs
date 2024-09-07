@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TestSoundcloudApi.Models;
 
-namespace TestSoundcloudApi
+namespace TestSoundcloudApi.ServicesInterface
 {
-    public interface IFileUrl
+    public interface IDownload
     {
         public Task<UrlToDownload> GetUrlForDownloadFileAsync(HttpClient client, Transcoding transcoding);
         public Task<HttpContent> GetFile(HttpClient client, UrlToDownload urlObj);

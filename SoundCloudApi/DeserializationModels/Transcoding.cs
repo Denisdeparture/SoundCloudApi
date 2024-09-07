@@ -10,7 +10,7 @@ namespace TestSoundcloudApi.Models
     {
         public string url { get; set; }
         public string preset { get; set; }
-        public int duration { get; set; }
+        public int? duration { get; set; }
         public bool snipped { get; set; }
         public Format format { get; set; }
         public string quality { get; set; }

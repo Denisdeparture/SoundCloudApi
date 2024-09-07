@@ -5,25 +5,27 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xabe.FFmpeg;
 
 namespace TestSoundcloudApi
 {
-    public class FileWork
+    public class FileManager
     {
         private readonly string _filesPath;
-        public FileWork(string filesPath)
+        public FileManager(string filesPath)
         {
             _filesPath = filesPath;
         }
-        public void AddFile(HttpContent stream, string name)
+        public async Task AddFile(string pathToFile, string name)
         {
-            name = _filesPath + name;
-            if (File.Exists(name)) throw new InvalidOperationException($"file {name} is exist");
-            using (var fileStream = new FileStream(name + ".m3u8", FileMode.CreateNew))
+            var mediaInfo = await FFmpeg.GetMediaInfo(pathToFile);
+            var conversion = await FFmpeg.Conversions.FromSnippet.ExtractAudio(mediaInfo.Path, _filesPath + $"\\{name}.mp3");
+            conversion.OnProgress += async (sender, args) =>
             {
-               var task = stream.CopyToAsync(fileStream);
-               task.Wait();
-            }
+                await Console.Out.WriteLineAsync($"[{args.Duration}/{args.TotalLength}][{args.Percent}%]");
+            };
+            var task = conversion.SetOutputFormat(Format.mp3).Start();
+            task.Wait();
         }
         public void RemoveFile(string name)
         {
@@ -42,6 +44,6 @@ namespace TestSoundcloudApi
             };
             p.Start();
         }
-        
+
     }
 }

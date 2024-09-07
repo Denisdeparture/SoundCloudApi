@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TestSoundcloudApi.Models;
 
-namespace TestSoundcloudApi
+namespace TestSoundcloudApi.ServicesInterface
 {
     public interface ISearch
     {

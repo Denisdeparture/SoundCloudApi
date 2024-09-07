@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestSoundcloudApi
+namespace TestSoundcloudApi.HelpfullServices
 {
     internal static class JsonCorrector
     {

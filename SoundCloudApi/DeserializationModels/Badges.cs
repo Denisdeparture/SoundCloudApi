@@ -8,9 +8,9 @@ namespace TestSoundcloudApi.Models
 {
     public class Badges
     {
-        public bool pro { get; set; }
-        public bool creator_mid_tier { get; set; }
-        public bool pro_unlimited { get; set; }
-        public bool verified { get; set; }
+        public bool? pro { get; set; }
+        public bool? creator_mid_tier { get; set; }
+        public bool? pro_unlimited { get; set; }
+        public bool? verified { get; set; }
     }
 }
